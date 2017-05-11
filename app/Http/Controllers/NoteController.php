@@ -69,7 +69,7 @@ class NoteController extends Controller
         $note->save();
 
         Session::flash('success', 'The note was successfully updated!');
-        return redirect()->action('NoteController@showNote', ['id' => $id]);
+        return redirect()->action('NoteController@singleNote', ['id' => $id]);
     }
 
     // Delete note.

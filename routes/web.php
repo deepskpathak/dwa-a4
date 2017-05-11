@@ -11,7 +11,7 @@
 |
 */
 
-Route::pattern('id', '[0-9]+');  // added this regex to force route id patterns and avoid errors with string pass
+Route::pattern('id', '[0-9]+');  // regex to force route id patterns and avoid errors with string pass
 
 Auth::routes();
 
@@ -42,8 +42,6 @@ Route::group(['middleware' => ['auth']], function() {
     Route::post('/note/edit/{id}', 'NoteController@update');
 
     Route::get('/note/delete/{id}', 'NoteController@delete');
-
-
 
 });
 

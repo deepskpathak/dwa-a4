@@ -55,10 +55,6 @@
                         @endif
                         @if(count($notebooks) == 0)
                             <span class="text-warning">Remember - You need to have a notebook first. <a href="/notebook/create">Create Notebook</a></span>
-                            @if (count($notes) == 0)
-                                <a href="{{ url('/note/create') }}">Create
-                                    one</a>?
-                                @endif
                         @endif
                     </ul>
                 </div>
