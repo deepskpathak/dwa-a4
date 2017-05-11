@@ -34,5 +34,3 @@
 	</div>
 </div>
 @endsection
-
-@extends('scripts.delete')
