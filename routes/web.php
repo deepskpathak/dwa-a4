@@ -11,10 +11,10 @@
 |
 */
 
-Route::pattern('id', '[0-9]+');  // regex to force route id patterns and avoid errors with string pass
-
 Auth::routes();
 
+
+// Routes without authentication
 Route::get('/', function () {
     return view('index');
 });

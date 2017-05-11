@@ -25,7 +25,7 @@ class NotebookController extends Controller
         $notebook->user_id = Auth::user()->id;
         $notebook->save();
 
-        Session::flash('success', 'The notebook was successfully created!');
+        Session::flash('success', 'The notebook was created!');
         return redirect()->route('home');
     }
 
@@ -44,7 +44,7 @@ class NotebookController extends Controller
         $notebook->name = $request->name;
         $notebook->save();
 
-        Session::flash('success', 'The notebook was successfully updated!');
+        Session::flash('success', 'The notebook was updated!');
         return redirect()->route('home');
     }
 
@@ -54,7 +54,7 @@ class NotebookController extends Controller
         $notebook = Notebook::find($id);
         $notebook->delete();
 
-        Session::flash('success', 'The notebook was successfully deleted!');
+        Session::flash('success', 'The notebook was deleted!');
         return redirect()->route('home');
     }
 }

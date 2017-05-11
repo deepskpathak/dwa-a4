@@ -43,7 +43,7 @@ class NoteController extends Controller
         $note->user_id = Auth::user()->id;
         $note->save();
 
-        Session::flash('success', 'The note was successfully created!');
+        Session::flash('success', 'The note was created!');
         return redirect()->route('home');
     }
     // Edit Note
@@ -68,7 +68,7 @@ class NoteController extends Controller
         $note->notebook_id = $request->notebook;
         $note->save();
 
-        Session::flash('success', 'The note was successfully updated!');
+        Session::flash('success', 'The note was updated!');
         return redirect()->action('NoteController@singleNote', ['id' => $id]);
     }
 
@@ -77,7 +77,7 @@ class NoteController extends Controller
         $note = Note::find($id);
         $note->delete();
 
-        Session::flash('success', 'The note was successfully deleted!');
+        Session::flash('success', 'The note was deleted!');
         return redirect()->route('home');
     }
 
