@@ -26,4 +26,16 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+    /**
+     * Any particular user can have man different notes and notebooks
+     */
+    public function notes() {
+        return $this->hasMany('App\Note');
+    }
+
+    public function notebooks() {
+        return $this->hasMany('App\Notebook');
+    }
 }

@@ -1,0 +1,11 @@
+.truncate {
+    font-size: 12px;
+}
+body ul li {
+     list-style: none;
+}
+
+.error-img {
+    max-height: 50%;
+    max-width: 50%;
+}
